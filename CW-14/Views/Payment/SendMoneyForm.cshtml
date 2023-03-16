@@ -1,0 +1,40 @@
+﻿@model CW_14.Models.SendMoneyVM
+<div asp-validation-summary="All">
+    
+</div>
+
+
+  <form method="post" class="row">
+            <div class="mb-3 col-md-6">
+                <label asp-for="CardNumber" class="form-label"></label>
+                <input asp-for="CardNumber"
+                       class="form-control"
+                       id="exampleFormControlInput1"
+                       placeholder="card number" />
+                <span asp-validation-for="CardNumber"></span>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label asp-for="Money" class="form-label"></label>
+                <input asp-for="Money"
+                       class="form-control"
+                       id="exampleFormControlInput1"
+                       placeholder="Money" />
+                <span asp-validation-for="Money"></span>
+            </div>
+            <div class="mb-3">
+                <p>مقدار را وارد کنید :</p>
+                 <input asp-for="OutputRandomNumber"
+                       hidden />
+                <label class="form-label">@Model.OutputRandomNumber</label>
+                 <input asp-for="InputRandomNumber"
+                       class="form-control"
+                       id="exampleFormControlInput1"
+                       placeholder="Input number" />
+                <span asp-validation-for="InputRandomNumber"></span>
+            </div>
+            <div class="mb-3">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit" asp-controller="Payment" asp-action="SendMoneyForm">send</button>
+                </div>
+            </div>
+        </form>
