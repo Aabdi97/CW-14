@@ -18,6 +18,7 @@ namespace AppCore.Contract
         public List<SendMoney> GetAll();
 
         public void AddToDb(SendMoney send,int inputNum, int outputNum);
+        bool CheckCardNumber(string cardnumber);
 
     }
 }

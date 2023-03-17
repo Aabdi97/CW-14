@@ -45,5 +45,9 @@ namespace AppService
             }
            
         }
+        public bool CheckCardNumber(string cardnumber)
+        {
+            return cardnumber.StartsWith("6037");            
+        }
     }
 }

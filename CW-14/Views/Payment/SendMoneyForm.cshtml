@@ -14,6 +14,20 @@
                 <span asp-validation-for="CardNumber"></span>
             </div>
             <div class="mb-3 col-md-6">
+                <label asp-for="Cvv2" class="form-label"></label>
+                <input asp-for="Cvv2"
+                       class="form-control"
+                       id="exampleFormControlInput1"
+                       placeholder="card number" />
+                <span asp-validation-for="Cvv2"></span>
+                <label asp-for="VerifyingCvv2" class="form-label"></label>
+                <input asp-for="VerifyingCvv2"
+                       class="form-control"
+                       id="exampleFormControlInput1"
+                       placeholder="card number" />
+                <span asp-validation-for="VerifyingCvv2"></span>
+            </div>
+            <div class="mb-3 col-md-6">
                 <label asp-for="Money" class="form-label"></label>
                 <input asp-for="Money"
                        class="form-control"
@@ -38,3 +52,4 @@
                 </div>
             </div>
         </form>
+        @*@section Scripts{<partial name="_ValidationScriptsPartial" />}*@
